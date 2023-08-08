@@ -25,14 +25,14 @@
             padding: 20px 0;
         }
         .show-button, .back-button {
-            padding: 10px 20px;
+            padding: 15px 30px;  /* パディングを増やす */
             background-color: #007BFF;
             color: #fff;
             border: none;
             border-radius: 4px;
-            font-size: 16px;
+            font-size: 20px;     /* フォントサイズを増やす */
             cursor: pointer;
-            margin: 5px;   /* ボタンの間にスペースを追加 */
+            margin: 5px;
         }
     </style>
 </head>
@@ -42,7 +42,7 @@
     </div>
     <div class="button-container">
         <button class="show-button" onclick="showImage()">過去注文履歴の確認</button>
-        <button class="back-button" onclick="backImage()" style="display: none;">戻る</button>  <!-- 初めは「戻る」ボタンを非表示にする -->
+        <button class="back-button" onclick="backImage()" style="display: none;">戻る</button>
     </div>
 
     <script>
