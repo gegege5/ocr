@@ -4,6 +4,23 @@
     <title>PDF Viewer</title>
 </head>
 <body>
-    <embed src="082list.pdf" width="100%" height="100%" type='application/pdf'>
+    <a id="pdf-link" href="082list.pdf" target="pdf-frame">View PDF</a>
+    <iframe id="pdf-frame" name="pdf-frame" src="082list.pdf" width="100%" height="100%" style="border: none;"></iframe>
+
+    <script>
+        const pdfLink = document.getElementById('pdf-link');
+        const pdfFrame = document.getElementById('pdf-frame');
+
+        pdfLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            const currentPdf = pdfFrame.getAttribute('src');
+
+            if (currentPdf === '082list.pdf') {
+                pdfFrame.setAttribute('src', '081list2.pdf');
+            } else {
+                pdfFrame.setAttribute('src', '082list.pdf');
+            }
+        });
+    </script>
 </body>
 </html>
