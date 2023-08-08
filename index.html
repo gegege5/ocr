@@ -24,7 +24,7 @@
             text-align: center;
             padding: 20px 0;
         }
-        .show-button {
+        .show-button, .back-button {
             padding: 10px 20px;
             background-color: #007BFF;
             color: #fff;
@@ -32,6 +32,7 @@
             border-radius: 4px;
             font-size: 16px;
             cursor: pointer;
+            margin: 5px;   /* ボタンの間にスペースを追加 */
         }
     </style>
 </head>
@@ -41,11 +42,22 @@
     </div>
     <div class="button-container">
         <button class="show-button" onclick="showImage()">過去注文履歴の確認</button>
+        <button class="back-button" onclick="backImage()" style="display: none;">戻る</button>  <!-- 初めは「戻る」ボタンを非表示にする -->
     </div>
 
     <script>
         function showImage() {
             document.querySelector(".image-container img").src = "081list2.jpeg";
+            window.scrollTo(0, 0);  // ページの一番上にスクロール
+            document.querySelector(".show-button").style.display = "none";  // 「過去注文履歴の確認」ボタンを非表示にする
+            document.querySelector(".back-button").style.display = "inline-block";  // 「戻る」ボタンを表示
+        }
+
+        function backImage() {
+            document.querySelector(".image-container img").src = "082list.jpeg";
+            window.scrollTo(0, 0);  // ページの一番上にスクロール
+            document.querySelector(".show-button").style.display = "inline-block";  // 「過去注文履歴の確認」ボタンを表示
+            document.querySelector(".back-button").style.display = "none";  // 「戻る」ボタンを非表示にする
         }
     </script>
 </body>
