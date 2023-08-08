@@ -14,11 +14,11 @@
             width: 100vw;
             height: 100vh;
             align-items: center;
+            overflow: hidden; /* 画像がはみ出た部分を隠す */
         }
         .image-container img {
-            max-width: 100%;
-            max-height: 100%;
-            height: auto; /* 縦のサイズを成り行きで調整する */
+            width: 100%; /* 画像の横幅を100%に設定 */
+            height: auto; /* 高さを自動で調整 */
         }
         .button-container {
             text-align: center;
