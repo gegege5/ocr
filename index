@@ -1,9 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>PDF Viewer</title>
-</head>
-<body>
-    <embed src="082list.pdf" width="100%" height="100%" type='application/pdf'>
-</body>
-</html>
